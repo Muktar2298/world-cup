@@ -1,0 +1,125 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+}
+
+header,
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* ----------------Header Part----------- */
+/* header content */
+header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background: #161616;
+  border-radius: 30px;
+  padding: 5%;
+  max-height: 645px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+header h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 80px;
+  color: #ffffff;
+  margin-top: 5%;
+}
+header p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+  margin: 16px 0px 16px 0px;
+}
+
+header button {
+  width: 187px;
+  height: 56px;
+  background: #dd0000;
+  border-radius: 5px;
+  color: #ffffff;
+  border: none;
+  margin-top: 16px;
+}
+/* transition effect */
+header button:hover {
+  background-color: #6e0606;
+  transition: all 3s;
+}
+header .arrow-btn {
+  margin-left: 7%;
+  line-height: normal;
+  width: 7px;
+  height: 14px;
+  border-radius: 1.5px solid #ffffff;
+}
+
+.header__img img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  margin-left: 10%;
+  margin-bottom: -12.5%;
+}
+header h1 {
+  font-size: 70px;
+  /* width: 0ch; */
+  /* margin-left: 200%; */
+  white-space: nowrap;
+  overflow: hidden;
+  animation: text 4s;
+}
+@keyframes text {
+  0% {
+    margin-left: -30%;
+  }
+  /* 25%{
+        margin-left: -25%;
+    }
+    75%{
+        margin-left: -15%;
+    } */
+  100% {
+    margin-left: 0%;
+  }
+}
+
+/* animation effect */
+.header__img {
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+@keyframes example {
+  0% {
+    background-color: rgb(197, 10, 10);
+    border-radius: 50%;
+  }
+  25% {
+    background-color: yellow;
+    border-radius: 50%;
+  }
+  50% {
+    background-color: blue;
+    border-radius: 50%;
+  }
+  100% {
+    background-color: black;
+    border-radius: 50%;
+  }
+}
