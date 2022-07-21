@@ -34,8 +34,18 @@ header h1 {
   font-weight: 700;
   font-size: 70px;
   line-height: 80px;
-  color: #ffffff;
+  /* color: #ffffff; */
   margin-top: 5%;
+
+  /* text effect */
+  /* text-transform: uppercase; */
+  color: #f5f5f5;
+  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
+    1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191,
+    1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191,
+    1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4),
+    1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2),
+    1px 30px 60px rgba(16, 16, 16, 0.4);
 }
 header p {
   font-family: "Poppins";
@@ -43,7 +53,7 @@ header p {
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
-  color: #ffffff;
+  color: #f5f5f5;
   margin: 16px 0px 16px 0px;
 }
 
@@ -52,9 +62,10 @@ header button {
   height: 56px;
   background: #dd0000;
   border-radius: 5px;
-  color: #ffffff;
+  color: #f5f5f5;
   border: none;
   margin-top: 16px;
+  font-size: 20px;
 }
 /* transition effect */
 header button:hover {
@@ -76,10 +87,16 @@ header .arrow-btn {
   margin-left: 10%;
   margin-bottom: -12.5%;
 }
+
+/* animation  effect*/
+header button {
+  animation: text 4s;
+}
+header p {
+  animation: text 4s;
+}
 header h1 {
   font-size: 70px;
-  /* width: 0ch; */
-  /* margin-left: 200%; */
   white-space: nowrap;
   overflow: hidden;
   animation: text 4s;
@@ -88,12 +105,6 @@ header h1 {
   0% {
     margin-left: -30%;
   }
-  /* 25%{
-        margin-left: -25%;
-    }
-    75%{
-        margin-left: -15%;
-    } */
   100% {
     margin-left: 0%;
   }
@@ -107,19 +118,15 @@ header h1 {
 
 @keyframes example {
   0% {
-    background-color: rgb(197, 10, 10);
-    border-radius: 50%;
+    margin-right: -50%;
   }
   25% {
-    background-color: yellow;
     border-radius: 50%;
   }
   50% {
-    background-color: blue;
     border-radius: 50%;
   }
   100% {
-    background-color: black;
     border-radius: 50%;
   }
 }
@@ -161,7 +168,7 @@ button {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 30px;
   color: #161616;
   border: none;
@@ -194,6 +201,13 @@ main .blogs__news {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 5%;
   border-radius: 5px;
+}
+.card img{
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+}
+.card img:hover {
+  transform: scale(1.2);
 }
 .card h4 {
   font-family: "Poppins";
@@ -288,6 +302,7 @@ footer .others__info ul li {
   color: #b9b9b9;
 }
 
+
 footer .social__icons ul {
   display: flex;
   justify-content: center;
@@ -295,9 +310,12 @@ footer .social__icons ul {
   margin-top: 2rem;
 }
 footer .social__icons i {
+  background-color: blue;
+  border-radius: 50%;
   font-size: 30px;
-  color: blue;
+  color: #ffffff;
 }
+
 
 /* -------------------------------------Responsiveness--------------------------------- */
 /* 1.x-small :: Dimensions <576px ---*/
@@ -311,7 +329,7 @@ footer .social__icons i {
   header h1 {
     font-style: normal;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 30px !important;
     line-height: 33px;
     text-align: center;
   }
@@ -364,7 +382,6 @@ footer .social__icons i {
   main .blogs__news {
     grid-template-columns: repeat(1, 1fr) !important;
     grid-row-gap: 0.5rem;
-    margin-top: -113% !important;
   }
 
   /* -----Footer Part----- */
@@ -439,7 +456,10 @@ footer .social__icons i {
   main .blogs__news {
     grid-template-columns: repeat(1, 1fr) !important;
     grid-row-gap: 0.5rem;
-    margin-top: -115%;
+    margin-top: -170%!important;
+  }
+  .view__all--btn--container {
+    display: none !important;
   }
 
   /* -----Footer Part----- */
@@ -518,6 +538,9 @@ footer .social__icons i {
     grid-row-gap: 0.5rem;
     margin-top: -115%;
   }
+  .view__all--btn--container {
+    display: none !important;
+  }
 
   /* -----Footer Part----- */
   footer h1 {
@@ -584,5 +607,9 @@ footer .social__icons i {
   }
   main .blogs__news .last-child {
     display: none;
+  }
+
+  .view__all--btn--container {
+    display: block;
   }
 }
